@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web-app:
+    restart: always
+    build: 
+      context: "/Users/nat/projects/docker-learn-temp/brewdog/frontend"
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:  
+      - /app/node_modules
+      - .:/app
+      

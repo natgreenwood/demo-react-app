@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import logo from './ng.svg';
+//import logo from './ng.svg';
 import './App.css';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hi there! Demo <code>react.js</code> application!
         </p>
         <a
           className="App-link"
@@ -17,6 +18,13 @@ function App() {
         >
           Learn React
         </a>
+        <p>
+          This was built for a Docker and Kubernetes learning project.
+        </p>
+        <p>
+          Soon to be hosted on AWS!
+        </p>
+       
       </header>
     </div>
   );
