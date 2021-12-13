@@ -19,7 +19,7 @@ function App() {
           Learn React
         </a>
         <p>
-          This was built for a Docker and Kubernetes learning project.
+          This was built for a Docker and K8S learning project.
         </p>
         <p>
           Soon to be hosted on AWS!
