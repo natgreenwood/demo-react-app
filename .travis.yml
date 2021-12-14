@@ -3,11 +3,22 @@ language: generic
 
 services:
   - docker
-  
+
 before_install:
   - docker build -t nathanielgreenwood/demo-react-app -f Dockerfile.dev . 
 
 script:
   - docker run -e CI=true nathanielgreenwood/demo-react-app npm run test
 
-  
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-1"
+  app: "docker"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-eu-west-1-294098874112"
+  bucket_path: "demo-react-app"
+  on:
+    branch: master
+    access_key_id: "$AWS_ACCESS_KEY"
+    secret_access_key: 
+      secure: "$AWS_SECRET_KEY"
